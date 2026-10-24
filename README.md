@@ -1,66 +1,140 @@
-# Customer Churn Analysis
+# Customer Churn Analysis | Excel, CSV & Power BI
 
-A small portfolio project exploring customer churn, basic data quality, and dashboard reporting with Excel/CSV and Power BI.
+A beginner-friendly Data Analytics portfolio project focused on customer churn, data quality validation, exploratory analysis, and dashboard reporting using Microsoft Excel, CSV, and Power BI.
 
-## Project files
+## Project Overview
 
-- `customer_churn_raw_dataset.csv` — source table supplied for this project (15 rows, 11 columns).
-- `Customer_Churn_Analysis_Workbook.xlsx` — workbook with raw data, calculated summary, contract summary, and definitions/limitations.
-- `Customer_Churn_Data_Quality_Report.pdf` — corrected data quality and exploratory report.
-- `Customer_Churn_Dashboard.pdf` — static PDF export of the supplied Power BI dashboard.
-- `Customer_Churn_Analysis.pbix` — supplied Power BI Desktop project file.
-- `README.md` — project overview and interpretation.
+Customer churn occurs when customers stop using a company's products or services. Understanding churn patterns can help businesses investigate customer retention and identify areas for further analysis.
 
-## Objective
+In this project, I explored a small customer dataset, validated data quality, calculated basic churn and retention metrics, examined contract-level churn patterns, and reviewed the results through a Power BI dashboard.
 
-Review the supplied customer records, calculate basic churn and retention metrics, check data consistency, and communicate observations in a Power BI dashboard.
+**Note:** This is a small illustrative dataset. The findings should not be generalized to a real customer population.
 
-## Key results
+## Objectives
+
+- Review the structure of the customer dataset.
+- Calculate churn and retention rates.
+- Check for missing values and duplicate customer IDs.
+- Validate the relationship between monthly charges, tenure, and total charges.
+- Explore churn patterns across contract types.
+- Present key metrics through a Power BI dashboard.
+- Document findings and limitations clearly.
+
+## Tools & Technologies
+
+- **Microsoft Power BI Desktop** — dashboard reporting
+- **Microsoft Excel** — data review and summary analysis
+- **CSV** — structured data handling
+- **Data quality validation** — missing-value, duplicate-ID, and consistency checks
+- **Exploratory Data Analysis (EDA)** — descriptive metrics and comparisons
+
+## Project Files
+
+| File | Description |
+|---|---|
+| `customer_churn_raw_dataset.csv` | Source dataset supplied for the project |
+| `Customer_Churn_Analysis_Workbook.xlsx` | Workbook containing raw data, summaries, contract analysis, and definitions |
+| `Customer_Churn_Data_Quality_Report.pdf` | Data quality checks and exploratory findings |
+| `Customer_Churn_Dashboard.pdf` | Static PDF preview of the Power BI dashboard |
+| `Customer_Churn_Analysis.pbix` | Power BI Desktop project file |
+| `README.md` | Project documentation |
+
+## Dataset Overview
+
+- **Total customer records:** 15
+- **Number of fields:** 11
+- **Missing cells:** 0
+- **Duplicate CustomerIDs:** 0
+
+The supplied dataset includes customer attributes such as age, tenure, contract type, monthly charges, total charges, support tickets, and churn status.
+
+## Key Results
 
 | Metric | Result |
 |---|---:|
 | Customers in sample | 15 |
-| Fields | 11 |
-| Missing cells | 0 |
-| Duplicate CustomerIDs | 0 |
 | Average age | 39.07 years |
 | Average tenure | 18.80 months |
 | Churned customers | 7 |
 | Retained customers | 8 |
 | Churn rate | 46.67% |
 | Retention rate | 53.33% |
-| Sum of TotalCharges for churned records (dashboard's ~3.11K KPI) | 3,109.51 (currency not specified) |
-| Sum of MonthlyCharges for churned records | 409.93 (currency not specified) |
+| TotalCharges for churned records | 3,109.51 |
+| MonthlyCharges for churned records | 409.93 |
 
-## Data quality checks
+*Currency and charge units were not specified in the source dataset. The 3,109.51 TotalCharges sum corresponds to the dashboard's approximately 3.11K KPI.*
 
-- No missing values were found in the supplied table.
+## Data Quality Checks
+
+- No missing values were found in the supplied dataset.
 - No duplicate `CustomerID` values were found.
-- `TotalCharges` matches `MonthlyCharges × TenureMonths` for all records within floating-point precision.
-- Observed ranges: Age 23–60, Tenure 2–48 months, SupportTickets 0–6.
-- These observed ranges are descriptive; they do not, by themselves, prove the presence or absence of statistical outliers.
+- `TotalCharges` matched `MonthlyCharges × TenureMonths` for all records within floating-point precision.
+- Observed age range: 23–60 years.
+- Observed tenure range: 2–48 months.
+- Observed support ticket range: 0–6.
 
-## Exploratory observation
+These observed ranges are descriptive and do not, by themselves, establish the presence or absence of statistical outliers.
 
-In this sample, all 7 churned customers have a Month-to-Month contract, while no churn is recorded among the One Year or Two Year contract records. This pattern is worth investigating with a larger dataset, but it must not be interpreted as proof of causation or as a reliable real-world churn estimate.
+## Exploratory Findings
 
-The dashboard's approximately 3.11K KPI matches the sum of TotalCharges for churned records (3,109.51). The separate sum of MonthlyCharges for churned records is 409.93. Currency is not specified in the source. These are descriptive sums, not a forecast of lost revenue or lifetime value.
+### Contract Type and Churn
 
-## Tools
+In this sample, all 7 churned customers had a Month-to-Month contract. No churn was recorded among customers with One Year or Two Year contracts.
 
-- Microsoft Power BI Desktop
-- Microsoft Excel / CSV
-- Basic data quality validation and exploratory analysis
+This pattern may be worth investigating using a larger dataset. However, the sample is too small to establish causation or provide a reliable estimate of real-world churn.
+
+### Charges Associated with Churned Records
+
+The sum of `TotalCharges` for churned records was **3,109.51**, matching the dashboard's approximately **3.11K** KPI.
+
+The sum of `MonthlyCharges` for churned records was **409.93**.
+
+These are descriptive sums, not forecasts of revenue loss or customer lifetime value.
+
+## Analysis Workflow
+
+1. Reviewed the supplied customer dataset.
+2. Checked the dataset structure and field count.
+3. Checked missing values and duplicate customer IDs.
+4. Validated the relationship between monthly charges, tenure, and total charges.
+5. Calculated churn and retention metrics.
+6. Compared churn outcomes across contract types.
+7. Reviewed the Power BI dashboard and documented findings.
+8. Recorded limitations to avoid overinterpreting the results.
 
 ## Limitations
 
-- Only 15 customer records are included, so results are illustrative and not statistically representative.
-- The original external source, sampling method, and currency were not provided.
-- Before publishing publicly, confirm the data is permitted for public sharing and contains no real confidential customer information.
-- The `.pbix` file is included as supplied; open it in Power BI Desktop to confirm all visuals, filters, and measures refresh and behave as expected.
+- The dataset contains only 15 customer records, so the findings are illustrative and not statistically representative.
+- The original external source and sampling method were not provided.
+- Currency and charge units were not specified.
+- The observed contract-level pattern does not establish causation.
+- The supplied `.pbix` file should be opened in Power BI Desktop to verify its visuals, filters, measures, and refresh behavior.
+- Before publishing publicly, confirm that the dataset is permitted for sharing and contains no confidential customer information.
 
-## How to use
+## How to Use This Project
 
-1. Open `Customer_Churn_Analysis_Workbook.xlsx` to review the data and summary.
-2. Open `Customer_Churn_Analysis.pbix` in Power BI Desktop to inspect the interactive report.
-3. Use the PDF files as quick previews and documentation.
+1. Open `Customer_Churn_Analysis_Workbook.xlsx` to review the data and summaries.
+2. Open `Customer_Churn_Analysis.pbix` in Microsoft Power BI Desktop to inspect the report.
+3. Open `Customer_Churn_Dashboard.pdf` for a static dashboard preview.
+4. Read `Customer_Churn_Data_Quality_Report.pdf` for the validation checks and exploratory findings.
+
+## Skills Demonstrated
+
+- Data quality validation
+- Descriptive data analysis
+- Churn and retention metric calculation
+- Contract-level comparisons
+- Excel and CSV data handling
+- Power BI dashboard reporting
+- Analytical documentation
+- Communicating data limitations responsibly
+
+## Project Status
+
+**Initial portfolio version completed.**
+
+Future improvements may include adding a dashboard screenshot, verifying Power BI measures, and expanding the analysis using a larger dataset.
+
+---
+
+Created as a learning and portfolio project in Data Analytics.
