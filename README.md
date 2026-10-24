@@ -8,6 +8,12 @@ Customer churn occurs when customers stop using a company's products or services
 
 In this project, I explored a small customer dataset, validated data quality, calculated basic churn and retention metrics, examined contract-level churn patterns, and reviewed the results through a Power BI dashboard.
 
+**Dashboard Preview**
+
+![Customer Churn Analysis Dashboard](dashboard-preview.png)
+
+*The dashboard image will appear here after `dashboard-preview.png` is uploaded to the repository.*
+
 **Note:** This is a small illustrative dataset. The findings should not be generalized to a real customer population.
 
 ## Objectives
@@ -37,6 +43,7 @@ In this project, I explored a small customer dataset, validated data quality, ca
 | `Customer_Churn_Data_Quality_Report.pdf` | Data quality checks and exploratory findings |
 | `Customer_Churn_Dashboard.pdf` | Static PDF preview of the Power BI dashboard |
 | `Customer_Churn_Analysis.pbix` | Power BI Desktop project file |
+| `dashboard-preview.png` | Dashboard preview image |
 | `README.md` | Project documentation |
 
 ## Dataset Overview
@@ -133,7 +140,7 @@ These are descriptive sums, not forecasts of revenue loss or customer lifetime v
 
 **Initial portfolio version completed.**
 
-Future improvements may include adding a dashboard screenshot, verifying Power BI measures, and expanding the analysis using a larger dataset.
+Future improvements may include verifying Power BI measures and expanding the analysis using a larger dataset.
 
 ---
 
